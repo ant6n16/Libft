@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antdelga <antdelga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/28 13:29:38 by antdelga          #+#    #+#             */
-/*   Updated: 2022/11/30 21:25:56 by antdelga         ###   ########.fr       */
+/*   Created: 2022/11/30 18:59:01 by antdelga          #+#    #+#             */
+/*   Updated: 2022/11/30 19:26:39 by antdelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	*ft_calloc(size_t count, size_t size)
 {
-	size_t	tam;
+	void	*memory;
+	size_t	contador;
 
-	tam = 0;
-	while (*s != '\0')
+	memory = malloc(count * size);
+	if (memory == NULL)
+		return (NULL);
+	contador = 0;
+	while (contador < (count * size))
 	{
-		s++;
-		tam++;
+		((unsigned char *)memory)[contador] = (unsigned char) 0;
+		contador++;
 	}
-	return (tam);
+	return (memory);
 }

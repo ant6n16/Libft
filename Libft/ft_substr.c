@@ -1,26 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antdelga <antdelga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/28 13:29:38 by antdelga          #+#    #+#             */
-/*   Updated: 2022/11/30 21:25:56 by antdelga         ###   ########.fr       */
+/*   Created: 2022/11/30 19:46:17 by antdelga          #+#    #+#             */
+/*   Updated: 2022/11/30 21:39:45 by antdelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	tam;
+	char			*dst;
+	unsigned int	index;
+	size_t			tam;
 
-	tam = 0;
-	while (*s != '\0')
+	tam = ft_strlen(s);
+	if (!s)
+		return (NULL);
+	dst = (char *) malloc(len + 1);
+	if (dst == NULL)
+		return (NULL);
+	index = 0;
+	while (index < len && s[start + index] != '\0' && start < tam)
 	{
-		s++;
-		tam++;
+		dst[index] = s[start + index];
+		index++;
 	}
-	return (tam);
+	dst[index] = '\0';
+	return (dst);
 }
