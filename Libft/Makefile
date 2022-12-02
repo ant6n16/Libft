@@ -6,7 +6,7 @@
 #    By: antdelga <antdelga@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/29 12:03:23 by antdelga          #+#    #+#              #
-#    Updated: 2022/11/30 19:47:12 by antdelga         ###   ########.fr        #
+#    Updated: 2022/12/02 22:30:18 by antdelga         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,9 @@ SRCS	=	ft_isalpha.c \
 			ft_calloc.c \
 			ft_strdup.c \
 			ft_substr.c \
+			ft_strjoin.c \
+			ft_strtrim.c \
+			ft_split.c \
 			
 
 OBJS	=	${SRCS:.c=.o}

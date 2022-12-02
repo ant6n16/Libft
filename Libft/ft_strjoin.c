@@ -1,37 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antdelga <antdelga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/30 19:46:17 by antdelga          #+#    #+#             */
-/*   Updated: 2022/12/02 22:07:35 by antdelga         ###   ########.fr       */
+/*   Created: 2022/12/02 20:33:52 by antdelga          #+#    #+#             */
+/*   Updated: 2022/12/02 20:49:44 by antdelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char			*dst;
-	unsigned int	index;
+	char	*final;
+	size_t	l;
+	size_t	i;
 
-	if (!s)
+	if (!s1 || !s2)
 		return (NULL);
-	if ((size_t) start > ft_strlen(s))
-		return (ft_strdup(""));
-	if (len > (ft_strlen(s) - start))
-		len = ft_strlen(s) - start;
-	dst = (char *) malloc(sizeof(char) * (len + 1));
-	if (dst == NULL)
+	l = ft_strlen(s1) + ft_strlen(s2);
+	i = 0;
+	final = (char *) malloc(sizeof(char) * (l + 1));
+	if (final == NULL)
 		return (NULL);
-	index = 0;
-	while (index < len)
+	while (i < ft_strlen(s1))
 	{
-		dst[index] = s[start + index];
-		index++;
+		final[i] = s1[i];
+		i++;
 	}
-	dst[index] = '\0';
-	return (dst);
+	while (i < l)
+	{
+		final[i] = s2[i - ft_strlen(s1)];
+		i++;
+	}
+	final[i] = '\0';
+	return (final);
 }
