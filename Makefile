@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: antdelga <antdelga@student.42.fr>          +#+  +:+       +#+         #
+#    By: antdelga <antdelga@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/29 12:03:23 by antdelga          #+#    #+#              #
-#    Updated: 2022/12/02 22:30:18 by antdelga         ###   ########.fr        #
+#    Updated: 2022/12/05 16:23:29 by antdelga         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,6 +37,13 @@ SRCS	=	ft_isalpha.c \
 			ft_strjoin.c \
 			ft_strtrim.c \
 			ft_split.c \
+			ft_itoa.c \
+			ft_strmapi.c \
+			ft_striteri.c \
+			ft_putchar_fd.c \
+			ft_putstr_fd.c \
+			ft_putendl_fd.c \
+			ft_putnbr_fd.c \
 			
 
 OBJS	=	${SRCS:.c=.o}

@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antdelga <antdelga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/29 18:08:50 by antdelga          #+#    #+#             */
-/*   Updated: 2022/12/04 21:39:04 by antdelga         ###   ########.fr       */
+/*   Created: 2022/12/05 15:51:39 by antdelga          #+#    #+#             */
+/*   Updated: 2022/12/05 16:03:19 by antdelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t		i1;
-	const char	*oc;
+	char	*result;
+	int		cont;
 
-	oc = NULL;
-	i1 = 0;
-	while (s[i1] != '\0')
+	if (!s || !f)
+		return (NULL);
+	result = (char *) malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (result == NULL)
+		return (NULL);
+	cont = 0;
+	while (s[cont] != '\0')
 	{
-		if (s[i1] == (const char) c)
-			oc = &s[i1];
-		i1++;
+		result[cont] = f(cont, s[cont]);
+		cont++;
 	}
-	if (s[i1] == (const char) c)
-		oc = &s[i1];
-	return ((char *) oc);
+	result[cont] = '\0';
+	return (result);
 }
