@@ -6,13 +6,13 @@
 /*   By: antdelga <antdelga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 14:35:34 by antdelga          #+#    #+#             */
-/*   Updated: 2022/12/05 15:47:33 by antdelga         ###   ########.fr       */
+/*   Updated: 2022/12/06 23:17:25 by antdelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	num_digits(long n)
+static int	num_digits(long n)
 {
 	int	cont;
 
@@ -27,7 +27,7 @@ int	num_digits(long n)
 	return (cont);
 }
 
-char	*get_number(char *table, long n, int digits)
+static char	*get_number(char *table, long n, int digits)
 {
 	table[digits] = '\0';
 	if (n == 0)
@@ -70,17 +70,3 @@ char	*ft_itoa(int n)
 		get_number(result, (long) n, digits);
 	return (result);
 }
-
-/*
-int	main(void)
-{
-	char	*prueba;
-	int		num;
-
-	num = -1;
-	prueba = ft_itoa(num);
-	printf("%s\n", prueba);
-	free(prueba);
-	return (0);
-}
-*/

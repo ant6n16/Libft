@@ -6,13 +6,13 @@
 /*   By: antdelga <antdelga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 21:01:20 by antdelga          #+#    #+#             */
-/*   Updated: 2022/12/06 22:51:52 by antdelga         ###   ########.fr       */
+/*   Updated: 2022/12/06 23:18:36 by antdelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	count_words(char const *s, char c)
+static size_t	count_words(char const *s, char c)
 {
 	size_t	i;
 	size_t	words;
@@ -28,14 +28,14 @@ size_t	count_words(char const *s, char c)
 	return (words);
 }
 
-void	free_memory(char **tabla, size_t i)
+static void	free_memory(char **tabla, size_t i)
 {
 	while (i-- > 0)
 		free(tabla[i]);
 	free(tabla);
 }
 
-char	**fill_table(char **tabla, size_t words, char const *s, char c)
+static char	**fill_table(char **tabla, size_t words, char const *s, char c)
 {
 	size_t	i;
 	size_t	start;
