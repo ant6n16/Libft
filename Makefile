@@ -6,7 +6,7 @@
 #    By: antdelga <antdelga@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/29 12:03:23 by antdelga          #+#    #+#              #
-#    Updated: 2022/12/05 16:23:29 by antdelga         ###   ########.fr        #
+#    Updated: 2022/12/05 21:55:30 by antdelga         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,13 +45,24 @@ SRCS	=	ft_isalpha.c \
 			ft_putendl_fd.c \
 			ft_putnbr_fd.c \
 			
-
 OBJS	=	${SRCS:.c=.o}
+
+BONUS	=	ft_lstnew.c \
+			ft_lstadd_front.c \
+			ft_lstsize.c \
+			ft_lstlast.c \
+			ft_lstadd_back.c \
+			ft_lstdelone.c \
+			ft_lstclear.c \
+			ft_lstiter.c \
+			ft_lstmap.c
+
+BONUS_OBJS	=	${BONUS:.c=.o}
 
 NAME	=	libft.a
 
 CC		=	gcc
-CFLAGS	= -Wall -Wextra -Werror
+CFLAGS	=   -Wall -Wextra -Werror
 
 .c.o:
 		${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
@@ -63,12 +74,15 @@ ${NAME}:	${OBJS}
 						ranlib ${NAME}
 
 clean:
-						rm -f ${OBJS}
+						rm -f ${OBJS} ${BONUS_OBJS}
 
 fclean:	clean
 						rm -f ${NAME}
 
 re:
 						fclean all
+
+bonus:		${OBJS} ${BONUS_OBJS}
+			ar crs ${NAME} ${OBJS} ${BONUS_OBJS}
 
 .PHONY:					all clean fclean re

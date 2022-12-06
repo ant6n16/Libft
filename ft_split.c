@@ -6,7 +6,7 @@
 /*   By: antdelga <antdelga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 21:01:20 by antdelga          #+#    #+#             */
-/*   Updated: 2022/12/05 16:03:50 by antdelga         ###   ########.fr       */
+/*   Updated: 2022/12/06 01:43:41 by antdelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,6 @@ size_t	count_words(char const *s, char c, size_t j)
 			words++;
 		i++;
 	}
-	if (words == 0)
-		return (words);
 	return (++words);
 }
 
@@ -81,19 +79,18 @@ char	**ft_split(char const *s, char c)
 int	main(void)
 {
 	char	**array;
-	char	*s = "Hola que tal";
-	char	c = ' ';
+	char	*s = "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultricies diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.";
+	char	c = 'z';
 	size_t	i;
 
-
-	// array = ft_split(s, c);
-	// i = 0;
-	// while (i < count_words(s, c, (ft_strlen(s) - 1)))
-	// {
-	// 	printf("%s,", array[i]);
-	// 	i++;
-	// }
-	// printf("%s\n", array[i]);
+	array = ft_split(s, c);
+	i = 0;
+	while (i < count_words(s, c, (ft_strlen(s) - 1)))
+	{
+		printf("%s, ", array[i]);
+		i++;
+	}
+	printf("%s\n", array[i]);
 	return (0);
 }
 */
