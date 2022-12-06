@@ -3,12 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: antdelga <antdelga@student.42malaga.com    +#+  +:+       +#+         #
+#    By: antdelga <antdelga@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/29 12:03:23 by antdelga          #+#    #+#              #
-#    Updated: 2022/12/05 21:55:30 by antdelga         ###   ########.fr        #
+#    Updated: 2022/12/06 21:03:52 by antdelga         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+NAME	=	libft.a
 
 SRCS	=	ft_isalpha.c \
 			ft_isdigit.c \
@@ -59,8 +61,6 @@ BONUS	=	ft_lstnew.c \
 
 BONUS_OBJS	=	${BONUS:.c=.o}
 
-NAME	=	libft.a
-
 CC		=	gcc
 CFLAGS	=   -Wall -Wextra -Werror
 
@@ -70,8 +70,7 @@ CFLAGS	=   -Wall -Wextra -Werror
 all:	${NAME}
 
 ${NAME}:	${OBJS}
-						ar rc ${NAME} ${OBJS}
-						ranlib ${NAME}
+						ar crs ${NAME} ${OBJS}
 
 clean:
 						rm -f ${OBJS} ${BONUS_OBJS}
@@ -85,4 +84,4 @@ re:
 bonus:		${OBJS} ${BONUS_OBJS}
 			ar crs ${NAME} ${OBJS} ${BONUS_OBJS}
 
-.PHONY:					all clean fclean re
+.PHONY:					all clean fclean re bonus

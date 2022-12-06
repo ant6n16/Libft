@@ -3,35 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antdelga <antdelga@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: antdelga <antdelga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 21:01:20 by antdelga          #+#    #+#             */
-/*   Updated: 2022/12/06 01:43:41 by antdelga         ###   ########.fr       */
+/*   Updated: 2022/12/06 19:46:36 by antdelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	count_words(char const *s, char c, size_t j)
+size_t	count_words(char const *s, char c)
 {
 	size_t	i;
 	size_t	words;
 
 	i = 0;
-	while (s[i] == c)
-		i++;
-	while (s[j] == c)
-	{
-		j--;
-	}
 	words = 0;
-	while (s[i] != '\0' && i < (j))
+	while (s[i] != '\0')
 	{
-		if (s[i] == c && s[i + 1] != c && s[i + 1] != '\0')
+		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
 			words++;
 		i++;
 	}
-	return (++words);
+	return (words);
 }
 
 char	**fill_table(char **tabla, size_t words, char const *s, char c)
@@ -43,9 +37,7 @@ char	**fill_table(char **tabla, size_t words, char const *s, char c)
 	i = 0;
 	start = 0;
 	len = 0;
-	if (words == 1)
-		tabla[0] = ft_substr(s, 0, ft_strlen(s));
-	while (i < words && words != 1)
+	while (i < words)
 	{
 		while (s[start] == c && s[start] != '\0')
 			start++;
@@ -67,30 +59,10 @@ char	**ft_split(char const *s, char c)
 	size_t	words;
 	char	**tabla;
 
-	words = count_words(s, c, (ft_strlen(s) - 1));
+	words = count_words(s, c);
 	tabla = (char **) malloc(sizeof(char *) * (words + 1));
 	if (tabla == NULL)
 		return (NULL);
 	tabla = fill_table(tabla, words, s, c);
 	return (tabla);
 }
-
-/*
-int	main(void)
-{
-	char	**array;
-	char	*s = "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultricies diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.";
-	char	c = 'z';
-	size_t	i;
-
-	array = ft_split(s, c);
-	i = 0;
-	while (i < count_words(s, c, (ft_strlen(s) - 1)))
-	{
-		printf("%s, ", array[i]);
-		i++;
-	}
-	printf("%s\n", array[i]);
-	return (0);
-}
-*/
