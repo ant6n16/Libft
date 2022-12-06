@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antdelga <antdelga@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antdelga <antdelga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 21:01:20 by antdelga          #+#    #+#             */
-/*   Updated: 2022/12/06 19:46:36 by antdelga         ###   ########.fr       */
+/*   Updated: 2022/12/06 22:51:52 by antdelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,16 +28,23 @@ size_t	count_words(char const *s, char c)
 	return (words);
 }
 
+void	free_memory(char **tabla, size_t i)
+{
+	while (i-- > 0)
+		free(tabla[i]);
+	free(tabla);
+}
+
 char	**fill_table(char **tabla, size_t words, char const *s, char c)
 {
 	size_t	i;
 	size_t	start;
 	size_t	len;
 
-	i = 0;
+	i = -1;
 	start = 0;
 	len = 0;
-	while (i < words)
+	while (++i < words)
 	{
 		while (s[start] == c && s[start] != '\0')
 			start++;
@@ -47,10 +54,13 @@ char	**fill_table(char **tabla, size_t words, char const *s, char c)
 			len++;
 		}
 		tabla[i] = ft_substr(s, start - len, len);
+		if (tabla[i] == NULL)
+		{
+			free_memory(tabla, i);
+			return (NULL);
+		}
 		len = 0;
-		i++;
 	}
-	tabla[words] = 0;
 	return (tabla);
 }
 
@@ -60,7 +70,7 @@ char	**ft_split(char const *s, char c)
 	char	**tabla;
 
 	words = count_words(s, c);
-	tabla = (char **) malloc(sizeof(char *) * (words + 1));
+	tabla = (char **) ft_calloc(sizeof(char *), (words + 1));
 	if (tabla == NULL)
 		return (NULL);
 	tabla = fill_table(tabla, words, s, c);

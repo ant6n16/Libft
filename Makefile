@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: antdelga <antdelga@student.42.fr>          +#+  +:+       +#+         #
+#    By: antdelga <antdelga@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/29 12:03:23 by antdelga          #+#    #+#              #
-#    Updated: 2022/12/06 21:03:52 by antdelga         ###   ########.fr        #
+#    Updated: 2022/12/06 23:12:03 by antdelga         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,18 +70,18 @@ CFLAGS	=   -Wall -Wextra -Werror
 all:	${NAME}
 
 ${NAME}:	${OBJS}
-						ar crs ${NAME} ${OBJS}
+			ar crs ${NAME} ${OBJS}
 
 clean:
-						rm -f ${OBJS} ${BONUS_OBJS}
+			rm -f ${OBJS} ${BONUS_OBJS}
 
 fclean:	clean
-						rm -f ${NAME}
+			rm -f ${NAME}
 
 re:
-						fclean all
+			fclean all
 
-bonus:		${OBJS} ${BONUS_OBJS}
-			ar crs ${NAME} ${OBJS} ${BONUS_OBJS}
+bonus:		${BONUS_OBJS}
+			ar crs ${NAME} ${BONUS_OBJS}
 
 .PHONY:					all clean fclean re bonus
