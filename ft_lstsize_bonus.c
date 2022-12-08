@@ -1,19 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antdelga <antdelga@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antdelga <antdelga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/28 12:54:40 by antdelga          #+#    #+#             */
-/*   Updated: 2022/12/07 21:08:37 by antdelga         ###   ########.fr       */
+/*   Created: 2022/12/05 18:18:40 by antdelga          #+#    #+#             */
+/*   Updated: 2022/12/05 18:21:48 by antdelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+#include "libft.h"
+
+int	ft_lstsize(t_list *lst)
 {
-	if (c < 0 || c > 127)
+	int	cont;
+
+	cont = 0;
+	if (!lst)
 		return (0);
-	else
-		return (1);
+	while (lst->next != NULL)
+	{
+		lst = lst->next;
+		cont++;
+	}
+	cont++;
+	return (cont);
 }

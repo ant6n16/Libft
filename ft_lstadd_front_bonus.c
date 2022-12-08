@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antdelga <antdelga@student.42.fr>          +#+  +:+       +#+        */
+/*   By: antdelga <antdelga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/28 12:54:40 by antdelga          #+#    #+#             */
-/*   Updated: 2022/12/07 21:08:37 by antdelga         ###   ########.fr       */
+/*   Created: 2022/12/05 18:12:29 by antdelga          #+#    #+#             */
+/*   Updated: 2022/12/05 18:18:02 by antdelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+#include "libft.h"
+
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (c < 0 || c > 127)
-		return (0);
-	else
-		return (1);
+	if (!lst || !new)
+		return ;
+	new->next = lst[0];
+	lst[0] = new;
 }

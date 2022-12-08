@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antdelga <antdelga@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: antdelga <antdelga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 21:01:20 by antdelga          #+#    #+#             */
-/*   Updated: 2022/12/08 19:14:52 by antdelga         ###   ########.fr       */
+/*   Updated: 2022/12/08 15:33:14 by antdelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,10 @@ static char	**fill_table(char **tabla, size_t words, char const *s, char c)
 	size_t	start;
 	size_t	len;
 
-	i = -1;
+	i = 0;
 	start = 0;
 	len = 0;
-	while (++i < words)
+	while (i < words)
 	{
 		while (s[start] == c && s[start] != '\0')
 			start++;
@@ -54,7 +54,7 @@ static char	**fill_table(char **tabla, size_t words, char const *s, char c)
 			len++;
 		}
 		tabla[i] = ft_substr(s, start - len, len);
-		if (tabla[i] == NULL)
+		if (tabla[i++] == NULL)
 		{
 			free_memory(tabla, i);
 			return (NULL);
