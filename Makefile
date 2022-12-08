@@ -6,7 +6,7 @@
 #    By: antdelga <antdelga@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/29 12:03:23 by antdelga          #+#    #+#              #
-#    Updated: 2022/12/06 23:12:03 by antdelga         ###   ########.fr        #
+#    Updated: 2022/12/08 18:54:27 by antdelga         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,8 +78,7 @@ clean:
 fclean:	clean
 			rm -f ${NAME}
 
-re:
-			fclean all
+re:	fclean all
 
 bonus:		${BONUS_OBJS}
 			ar crs ${NAME} ${BONUS_OBJS}
