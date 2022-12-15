@@ -32,51 +32,51 @@ The code in this repository follows [the rules of the Norminette](https://github
 * [`ft_isalnum`](https://github.com/ant6n16/Libft/blob/main/ft_isalnum.c) : Test a character to see if it's alphanumeric; it is equivalent to (isalpha(c) || isdigit(c)).
 * [`ft_isprint`](https://github.com/ant6n16/Libft/blob/main/ft_isprint.c) : Test a character to see if it's any printable character, including a space.
 * [`ft_tolower`](https://github.com/ant6n16/Libft/blob/main/ft_tolower.c) : Convert uppercase letters to lowercase.
-* [`ft_toupper`](https://github.com/ant6n16/Libftn/blob/main/ft_toupper.c) : Convert lowercase letters to uppercase.
+* [`ft_toupper`](https://github.com/ant6n16/Libft/blob/main/ft_toupper.c) : Convert lowercase letters to uppercase.
 
 ### Functions from `<stdlib.h>` library
-* [`ft_atoi`](https://github.com/ant6n16/Libft/ft_atoi.c) : Convert the initial portion of the string pointed to by nptr to int.
-* [`ft_calloc`](https://github.com/ant6n16/Libft/ft_calloc.c) : Allocate unused space for an array of "count" elements each of whose size in bytes is "size" and initializes to all bits 0.
+* [`ft_atoi`](https://github.com/ant6n16/Libft/blob/main/ft_atoi.c) : Convert the initial portion of the string pointed to by nptr to int.
+* [`ft_calloc`](https://github.com/ant6n16/Libft/blob/main/ft_calloc.c) : Allocate unused space for an array of "count" elements each of whose size in bytes is "size" and initializes to all bits 0.
 
 ### Functions from `<strings.h>` library
-* [`ft_bzero`](https://github.com/ant6n16/Libft/ft_bzero.c) : Set the data in the n bytes of the memory starting at the location pointed to by s, to null bytes (filling it with zeroes).
-* [`ft_memset`](https://github.com/ant6n16/Libft/ft_memset.c) : Set the first n bytes of the memory area pointed to by s with the constant byte c.
-* [`ft_memchr`](https://github.com/ant6n16/Libft/ft_memchr.c) : Scans the initial n bytes of the memory area pointed to by s for the first instance of c.
-* [`ft_memcmp`](https://github.com/ant6n16/Libft/ft_memcmp.c) : Compare the first n bytes of the memory areas s1 and s2.
-* [`ft_memmove`](https://github.com/ant6n16/Libft/ft_memmove.c) : Copy n bytes from memory area src to memory area dest, handling overlapping memory correctly.
-* [`ft_memcpy`](https://github.com/ant6n16/Libft/ft_memcpy.c) : Copy bytes from one buffer to another. The memory areas must not overlap. Use memmove if the memory areas do overlap.
-* [`ft_strlen`](https://github.com/ant6n16/Libft/ft_strlen.c) : Get the length of a string.
-* [`ft_strchr`](https://github.com/ant6n16/Libft/ft_strchr.c) : Find the first occurrence of a character in a string.
-* [`ft_strrchr`](https://github.com/ant6n16/Libft/ft_strrchr.c) : Find the last occurrence of a character in a string.
-* [`ft_strnstr`](https://github.com/ant6n16/Libft/ft_strnstr.c) : Locate a substring in a string.
-* [`ft_strncmp`](https://github.com/ant6n16/Libft/ft_strncmp.c) : Compare two strings, up to a given length.
-* [`ft_strdup`](https://github.com/ant6n16/Libft/ft_strdup.c) : Create a duplicate of a string, using `malloc`.
-* [`ft_strlcpy`](https://github.com/ant6n16/Libft/ft_strlcpy.c) : Copy up to size - 1 characters from string src to dst.
-* [`ft_strlcat`](https://github.com/ant6n16/Libft/ft_strlcat.c) : Concatenates the start of the string src to the end of dst with -1 of the size.
+* [`ft_bzero`](https://github.com/ant6n16/Libft/blob/main/ft_bzero.c) : Set the data in the n bytes of the memory starting at the location pointed to by s, to null bytes (filling it with zeroes).
+* [`ft_memset`](https://github.com/ant6n16/Libft/blob/main/ft_memset.c) : Set the first n bytes of the memory area pointed to by s with the constant byte c.
+* [`ft_memchr`](https://github.com/ant6n16/Libft/blob/main/ft_memchr.c) : Scans the initial n bytes of the memory area pointed to by s for the first instance of c.
+* [`ft_memcmp`](https://github.com/ant6n16/Libft/blob/main/ft_memcmp.c) : Compare the first n bytes of the memory areas s1 and s2.
+* [`ft_memmove`](https://github.com/ant6n16/Libft/blob/main/ft_memmove.c) : Copy n bytes from memory area src to memory area dest, handling overlapping memory correctly.
+* [`ft_memcpy`](https://github.com/ant6n16/Libft/blob/main/ft_memcpy.c) : Copy bytes from one buffer to another. The memory areas must not overlap. Use memmove if the memory areas do overlap.
+* [`ft_strlen`](https://github.com/ant6n16/Libft/blob/main/ft_strlen.c) : Get the length of a string.
+* [`ft_strchr`](https://github.com/ant6n16/Libft/blob/main/ft_strchr.c) : Find the first occurrence of a character in a string.
+* [`ft_strrchr`](https://github.com/ant6n16/Libft/blob/main/ft_strrchr.c) : Find the last occurrence of a character in a string.
+* [`ft_strnstr`](https://github.com/ant6n16/Libft/blob/main/ft_strnstr.c) : Locate a substring in a string.
+* [`ft_strncmp`](https://github.com/ant6n16/Libft/blob/main/ft_strncmp.c) : Compare two strings, up to a given length.
+* [`ft_strdup`](https://github.com/ant6n16/Libft/blob/main/ft_strdup.c) : Create a duplicate of a string, using `malloc`.
+* [`ft_strlcpy`](https://github.com/ant6n16/Libft/blob/main/ft_strlcpy.c) : Copy up to size - 1 characters from string src to dst.
+* [`ft_strlcat`](https://github.com/ant6n16/Libft/blob/main/ft_strlcat.c) : Concatenates the start of the string src to the end of dst with -1 of the size.
 
 ### Non-standard functions
-* [`ft_itoa`](https://github.com/ant6n16/Libft/ft_itoa.c) : Convert integer to ASCII string.
-* [`ft_substr`](https://github.com/ant6n16/Libft/ft_substr.c) : Get a substring from string.
-* [`ft_strtrim`](https://github.com/ant6n16/Libft/ft_strtrim.c) : Trim beginning and end of string with the specified substring.
-* [`ft_strjoin`](https://github.com/ant6n16/Libft/ft_strjoin.c) : Concatenate two strings into a new string, using `calloc`.
-* [`ft_split`](https://github.com/ant6n16/Libft/ft_split.c) : Split string, with specified character as delimiter, into an array of strings.
-* [`ft_strmapi`](https://github.com/ant6n16/Libft/ft_strmapi.c) : Create new string from a string modified with a specified function.
-* [`ft_striteri`](https://github.com/ant6n16/Libft/ft_striteri.c) : Modify a string with a given function.
-* [`ft_putchar_fd`](https://github.com/ant6n16/Libft/ft_putchar_fd.c) : Output a character to given file.
-* [`ft_putstr_fd`](https://github.com/ant6n16/Libft/ft_putstr_fd.c) : Output string to given file.
-* [`ft_putendl_fd`](https://github.com/ant6n16/Libft/ft_putendl_fd.c) : Output string to given file with newline.
-* [`ft_putnbr_fd`](https://github.com/ant6n16/Libft/ft_putnbr_fd.c) : Output integer to given file.
+* [`ft_itoa`](https://github.com/ant6n16/Libft/blob/main/ft_itoa.c) : Convert integer to ASCII string.
+* [`ft_substr`](https://github.com/ant6n16/Libft/blob/main/ft_substr.c) : Get a substring from string.
+* [`ft_strtrim`](https://github.com/ant6n16/Libft/blob/main/ft_strtrim.c) : Trim beginning and end of string with the specified substring.
+* [`ft_strjoin`](https://github.com/ant6n16/Libft/blob/main/ft_strjoin.c) : Concatenate two strings into a new string, using `calloc`.
+* [`ft_split`](https://github.com/ant6n16/Libft/blob/main/ft_split.c) : Split string, with specified character as delimiter, into an array of strings.
+* [`ft_strmapi`](https://github.com/ant6n16/Libft/blob/main/ft_strmapi.c) : Create new string from a string modified with a specified function.
+* [`ft_striteri`](https://github.com/ant6n16/Libft/blob/main/ft_striteri.c) : Modify a string with a given function.
+* [`ft_putchar_fd`](https://github.com/ant6n16/Libft/blob/main/ft_putchar_fd.c) : Output a character to given file.
+* [`ft_putstr_fd`](https://github.com/ant6n16/Libft/blob/main/ft_putstr_fd.c) : Output string to given file.
+* [`ft_putendl_fd`](https://github.com/ant6n16/Libft/blob/main/ft_putendl_fd.c) : Output string to given file with newline.
+* [`ft_putnbr_fd`](https://github.com/ant6n16/Libft/blob/main/ft_putnbr_fd.c) : Output integer to given file.
 
 ### Linked list functions *(bonus)*
-* [`ft_lstnew`](https://github.com/ant6n16/Libft/ft_lstnew_bonus.c) : Create new list.
-* [`ft_lstsize`](https://github.com/ant6n16/Libft/ft_lstsize_bonus.c) : Count elements of a list.
-* [`ft_lstlast`](https://github.com/ant6n16/Libft/ft_lstlast_bonus.c) : Find last element of list.
-* [`ft_lstadd_back`](https://github.com/ant6n16/Libft/ft_lstadd_back_bonus.c) : Add new element at end of list.
-* [`ft_lstadd_front`](https://github.com/ant6n16/Libft/ft_lstadd_front_bonus.c) : Add new element at beginning of list.
-* [`ft_lstdelone`](https://github.com/ant6n16/Libft/ft_lstdelone_bonus.c) : Delete element from list.
-* [`ft_lstclear`](https://github.com/ant6n16/Libft/ft_lstclear_bonus.c) : Delete sequence of elements of list from a starting point.
-* [`ft_lstiter`](https://github.com/ant6n16/Libft/ft_lstiter_bonus.c) : Apply function to content of all list's elements.
-* [`ft_lstmap`](https://github.com/ant6n16/Libft/ft_lstmap_bonus.c) : Apply function to content of all list's elements into new list.
+* [`ft_lstnew`](https://github.com/ant6n16/Libft/blob/main/ft_lstnew_bonus.c) : Create new list.
+* [`ft_lstsize`](https://github.com/ant6n16/Libft/blob/main/ft_lstsize_bonus.c) : Count elements of a list.
+* [`ft_lstlast`](https://github.com/ant6n16/Libft/blob/main/ft_lstlast_bonus.c) : Find last element of list.
+* [`ft_lstadd_back`](https://github.com/ant6n16/Libft/blob/main/ft_lstadd_back_bonus.c) : Add new element at end of list.
+* [`ft_lstadd_front`](https://github.com/ant6n16/Libft/blob/main/ft_lstadd_front_bonus.c) : Add new element at beginning of list.
+* [`ft_lstdelone`](https://github.com/ant6n16/Libft/blob/main/ft_lstdelone_bonus.c) : Delete element from list.
+* [`ft_lstclear`](https://github.com/ant6n16/Libft/blob/main/ft_lstclear_bonus.c) : Delete sequence of elements of list from a starting point.
+* [`ft_lstiter`](https://github.com/ant6n16/Libft/blob/main/ft_lstiter_bonus.c) : Apply function to content of all list's elements.
+* [`ft_lstmap`](https://github.com/ant6n16/Libft/blob/main/ft_lstmap_bonus.c) : Apply function to content of all list's elements into new list.
 
 ## Requirements
 The library is written in __C language__ and needs the `gcc` compiler, with `<stdlib.h>` and `<unistd.h>` standard libraries to run.
