@@ -26,20 +26,19 @@ The code in this repository follows [the rules of the Norminette](https://github
 
 ## Index
 ### Functions from `<ctype.h>` library
-* [`ft_isascii`](https://github.com/ant6n16/Libft/ft_isascii.c) : Test whether c is a 7-bit US-ASCII character code.
-* [`ft_isalpha`](https://github.com/ant6n16/Libft/ft_isalpha.c) : Test a character to see if it's alphabetic.
-* [`ft_isdigit`](https://github.com/ant6n16/Libft/ft_isdigit.c) : Test a character to see if it's a digit (0 through 9).
-* [`ft_isalnum`](https://github.com/ant6n16/Libft/ft_isalnum.c) : Test a character to see if it's alphanumeric; it is equivalent to (isalpha(c) || isdigit(c)).
-* [`ft_isprint`](https://github.com/ant6n16/Libft/ft_isprint.c) : Test a character to see if it's any printable character, including a space.
-* [`ft_tolower`](https://github.com/ant6n16/Libft/ft_tolower.c) : Convert uppercase letters to lowercase.
-* [`ft_toupper`](https://github.com/ant6n16/Libftn/ft_toupper.c) : Convert lowercase letters to uppercase.
+* [`ft_isascii`](https://github.com/ant6n16/Libft/blob/main/ft_isascii.c) : Test whether c is a 7-bit US-ASCII character code.
+* [`ft_isalpha`](https://github.com/ant6n16/Libft/blob/main/ft_isalpha.c) : Test a character to see if it's alphabetic.
+* [`ft_isdigit`](https://github.com/ant6n16/Libft/blob/main/ft_isdigit.c) : Test a character to see if it's a digit (0 through 9).
+* [`ft_isalnum`](https://github.com/ant6n16/Libft/blob/main/ft_isalnum.c) : Test a character to see if it's alphanumeric; it is equivalent to (isalpha(c) || isdigit(c)).
+* [`ft_isprint`](https://github.com/ant6n16/Libft/blob/main/ft_isprint.c) : Test a character to see if it's any printable character, including a space.
+* [`ft_tolower`](https://github.com/ant6n16/Libft/blob/main/ft_tolower.c) : Convert uppercase letters to lowercase.
+* [`ft_toupper`](https://github.com/ant6n16/Libftn/blob/main/ft_toupper.c) : Convert lowercase letters to uppercase.
 
 ### Functions from `<stdlib.h>` library
 * [`ft_atoi`](https://github.com/ant6n16/Libft/ft_atoi.c) : Convert the initial portion of the string pointed to by nptr to int.
 * [`ft_calloc`](https://github.com/ant6n16/Libft/ft_calloc.c) : Allocate unused space for an array of "count" elements each of whose size in bytes is "size" and initializes to all bits 0.
 
 ### Functions from `<strings.h>` library
-https://github.com/ant6n16/Libft/blob/main/ft_atoi.c
 * [`ft_bzero`](https://github.com/ant6n16/Libft/ft_bzero.c) : Set the data in the n bytes of the memory starting at the location pointed to by s, to null bytes (filling it with zeroes).
 * [`ft_memset`](https://github.com/ant6n16/Libft/ft_memset.c) : Set the first n bytes of the memory area pointed to by s with the constant byte c.
 * [`ft_memchr`](https://github.com/ant6n16/Libft/ft_memchr.c) : Scans the initial n bytes of the memory area pointed to by s for the first instance of c.
